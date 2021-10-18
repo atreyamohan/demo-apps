@@ -1,4 +1,3 @@
-replicaCount: 2
 service:
   ## @param service.type Service type
   ##
