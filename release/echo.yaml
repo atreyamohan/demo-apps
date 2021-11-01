@@ -17,6 +17,8 @@ spec:
   selector:
     matchLabels:
       app: echo
+  strategy:
+    type: Recreate
   replicas: 1
   template:
     metadata:
