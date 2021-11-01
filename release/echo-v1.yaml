@@ -31,3 +31,21 @@ spec:
         - "-text=Prod"
         ports:
         - containerPort: 5678
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: echo-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /echo
+        pathType: Prefix
+        backend:
+          service:
+            name: echo
+            port:
+              number: 80
