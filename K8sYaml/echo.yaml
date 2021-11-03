@@ -24,7 +24,7 @@ spec:
     metadata:
       labels:
         app: echo
-        version: "3.0"
+        version: "4.0"
     spec:
       containers:
       - name: echo
