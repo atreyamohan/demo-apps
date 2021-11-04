@@ -29,12 +29,12 @@ spec:
     metadata:
       labels:
         app: echo
-        version: "3.0"
+        version: "1.0"
     spec:
       containers:
       - name: echo
         image: hashicorp/http-echo
         args:
-        - "-text=Blue v3"
+        - "-text=Blue"
         ports:
         - containerPort: 5678
