@@ -20,10 +20,7 @@ spec:
     matchLabels:
       app: echo
   strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 2       
-      maxUnavailable: 1
+    type: Recreate
   replicas: 2
   template:
     metadata:
@@ -35,6 +32,6 @@ spec:
       - name: echo
         image: hashicorp/http-echo
         args:
-        - "-text=Blue v2"
+        - "-text=Blue"
         ports:
         - containerPort: 5678
