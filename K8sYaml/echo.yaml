@@ -46,7 +46,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: echo
+      app: echo-green
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -56,7 +56,7 @@ spec:
   template:
     metadata:
       labels:
-        app: echo
+        app: echo-green
         version: "1.0"
     spec:
       containers:
