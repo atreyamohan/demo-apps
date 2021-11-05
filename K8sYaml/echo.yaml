@@ -35,7 +35,7 @@ spec:
       - name: echo
         image: hashicorp/http-echo
         args:
-        - "-text=Blue v3"
+        - "-text=Blue"
         ports:
         - containerPort: 5678
 ---
@@ -46,7 +46,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: echo
+      app: echo-green
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -63,6 +63,6 @@ spec:
       - name: echo
         image: hashicorp/http-echo
         args:
-        - "-text=Green v3"
+        - "-text=Green"
         ports:
         - containerPort: 5678
