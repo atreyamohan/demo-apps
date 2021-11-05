@@ -46,7 +46,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: echo-green
+      app: echo
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -60,7 +60,7 @@ spec:
         version: "1.0"
     spec:
       containers:
-      - name: echo
+      - name: echo-green
         image: hashicorp/http-echo
         args:
         - "-text=Green"
