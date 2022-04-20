@@ -564,7 +564,7 @@ ldapDaemon:
 service:
   ## @param service.type Service type
   ##
-  type: LoadBalancer
+  type: ClusterIP
   ## @param service.port Service HTTP port
   ##
   port: 80
